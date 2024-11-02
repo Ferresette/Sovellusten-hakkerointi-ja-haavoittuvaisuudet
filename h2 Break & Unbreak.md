@@ -10,11 +10,15 @@
 
 **- PortSwigger: Access control vulnerabilities and privilege escalation**
 
-  
+  Liittyy edellä mainittuun Broken Access Controliin, privilege escalation tarkoittaa, että hyökkääjä saa korotettua käyttäjäoikeuksiaan. Esimerkiksi norimikäyttäjästä järjestelmänvalvojaksi.
 
 **- Karvinen 2006: Raportin kirjoittaminen**
 
+  Teron vinkit raportin kirjoittamiseen. Hyviä ohjeita, mitä olen monia itsekin pyrkinyt hyödyntämään parhaani mukaan.
+
 **- Vapaaehtoinen: PortSwigger 2020: What is SQL injection? - Web Security Academy (noin 10 min video)**
+
+  SQL injektio on hyökkäysmetodi, missä yritetään syöttää haitallista SQL koodia syötekenttään tai url osoitteeseen. Tällä tavalla voidaan saada manipuloitua tietokantaa. Johtuu yleensä heikosta validoinnista ennen SQL kyselyn suorittamista.
 
 
 ### a) Murtaudu 010-staff-only. Ks. Karvinen 2024: Hack'n Fix
