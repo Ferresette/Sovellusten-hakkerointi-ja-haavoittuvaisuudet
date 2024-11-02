@@ -22,6 +22,21 @@
 
 
 ### a) Murtaudu 010-staff-only. Ks. Karvinen 2024: Hack'n Fix
+
+  Minulta löytyi aikaisemmin ohjeistettu ladattava Debian 12 Bookworm, millä lähdin ratkaisemaan tehtäviä. Aloitin lataamalla micro tekstieditorin ensimmäiseksi.
+  
+      sudo apt update
+      sudo apt install micro
+
+  Tämän jälkeen teron sivuilla oli zippi paketti tehtävää varten, joten aloitettiin lataamalla se. Tämän jälkeen unzipattiin paketti. Aluksi minulla ei toiminut wget komento, mutta selvisi ettei sitä ollut valmiiksi asennettuna joten täytyi ladata se myös.
+
+      $ wget https://terokarvinen.com/hack-n-fix/teros-challenges.zip
+      $ unzip teros-challenges.zip
+
+![image](https://github.com/user-attachments/assets/dd98d5d7-a4ae-4087-a75b-bce80d19923d)
+
+  Unzippaamisen jälkeen seikkailin itseni kyseiseen kansioon ja sieltä löytyi tehtävät.
+
 ### b) Korjaa 010-staff-only haavoittuvuus lähdekoodista. Osoita testillä, että ratkaisusi toimii.
 ### c) Ratkaise dirfuzt-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf. Tämä auttaa 020-your-eyes-only ratkaisemisessa.
 ### d) Murtaudu 020-your-eyes-only. Ks. Karvinen 2024: Hack'n Fix
