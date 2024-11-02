@@ -43,8 +43,6 @@
 ![image](https://github.com/user-attachments/assets/e8b5a51d-adc7-494f-bf0a-4bca5da7264e)
 
 
-
-
   Löydettiin ip-osoite, missä sovellus on käynnissä ja lähdettiin sitä kohti seuraavaksi.
 
   Tarkoitus oli selvittää SUPERADMININ salasana, kokeilin eri variaatioita esimerkiksi 123 mitä ohjeistettiin. Tämä paljasti salasanan. Huomasin, että kenttään ei voinut kirjoittaa tekstiä vaan pelkkiä numeroita, joten lähdin tutkimaan tiedostoja lisää. Siirryin templateseihin ja sieltä löytyi index.html tiedosto, jota lähdin tutkailemaan micro tekstieditorilla.
@@ -58,7 +56,7 @@
 
   ![image](https://github.com/user-attachments/assets/5990f2c7-ba70-439b-9fff-91c6cd9d9352)
 
-
+  OR 1=1 tarkoittaa ehto palauttaa aina true, koska 1=1 on aina totta. Limit sen sijaan rajaa tulosta. Tässä tapauksessa ohitettiin 2 riviä ja palautettiin yksi rivi. Vähän jäi mietityttämään, miksi juuri tuo 2,1 paljasti SUPERADMININ, koska 1,1 tai 3,1 näytti taas eri tuloksia.
 
 
 ### b) Korjaa 010-staff-only haavoittuvuus lähdekoodista. Osoita testillä, että ratkaisusi toimii.
