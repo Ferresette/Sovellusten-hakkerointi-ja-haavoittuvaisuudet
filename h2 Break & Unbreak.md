@@ -1,3 +1,10 @@
+### Alusta
+
+Virtuaalikone
+- Debian 12 Bookworm
+- 4GB RAM
+
+
 ### x) Lue/katso/kuuntele ja tiivistä.
 
 **- OWASP: OWASP Top 10: A01 Broken Access Control** 
