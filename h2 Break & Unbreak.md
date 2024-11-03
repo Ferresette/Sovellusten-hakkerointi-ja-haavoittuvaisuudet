@@ -68,9 +68,15 @@ Aika paljon pyörittelin päässäni kaikenlaisia ajatuksia, mikä siinä olisi 
 
 Yläpuolella näkyy muutettu python koodi, millä sain sen toimimaan. Eli luotiin parametrisoitu kysely. 
 
-    sql = "SELECT password FROM pins WHERE pin = :pin" # Käyttää :pin paikkamerkkiä SQL kyselyssä, eikä se toimi varsinaisena arvona.
-    db.session.execute(text(sql), {"pin": pin}) # Käyttää kyseistä sanakirjaa, mikä sisältää avaimen pin ja se vastaa paikkamerkkiä :pin. Sekä käyttäjän syötteen eli pin. SQLalchemy korvaa datan paikkamerkillä niin ettei SQL rakennetta voi muuttaa.
+  **sql = "SELECT password FROM pins WHERE pin = :pin"** # Käyttää :pin paikkamerkkiä SQL kyselyssä, eikä se toimi varsinaisena arvona.
+    
+  **db.session.execute(text(sql), {"pin": pin})** # Käyttää kyseistä sanakirjaa, mikä sisältää avaimen pin ja se vastaa paikkamerkkiä :pin. Sekä käyttäjän syötteen eli pin. SQLalchemy korvaa datan paikkamerkillä niin ettei SQL rakennetta voi muuttaa.
 
+  Muutosten jälkeen lähdin yrittämään sivustolle, toimisiko aikaisemmin käytettävä haavoittuvuus. Kuten kuvasta näkyy, komento ei enään paljastanut SUPERADMININ salasanaa.
+
+  ![image](https://github.com/user-attachments/assets/d2ee690a-d250-49de-9201-c07d9cb3c5ac)
+
+  Tässä tehtävässä kului aika kauan aikaa useampi tunti, ja hyödynsin kyllä chatgpt:tä tehtävän ratkaisussa lopussa. Yllättävän pienillä muutoksila sai ehkäistyä kyseisen haavoittuvuuden. Vaikka aluksi oli pieni käry, missä se sijaitsisi niin pitäisi olla hieman parempi käsitys pythonin ja sql:n toiminnasta kokonaisuudessaan sen selvittämiseksi.
 
 
 
