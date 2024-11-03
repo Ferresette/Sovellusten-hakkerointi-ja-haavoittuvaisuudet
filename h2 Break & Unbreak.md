@@ -79,7 +79,38 @@ Yläpuolella näkyy muutettu python koodi, millä sain sen toimimaan. Eli luotii
   Tässä tehtävässä kului aika kauan aikaa useampi tunti, ja hyödynsin kyllä chatgpt:tä tehtävän ratkaisussa lopussa. Yllättävän pienillä muutoksila sai ehkäistyä kyseisen haavoittuvuuden. Vaikka aluksi oli pieni käry, missä se sijaitsisi niin pitäisi olla hieman parempi käsitys pythonin ja sql:n toiminnasta kokonaisuudessaan sen selvittämiseksi.
 
 
-
 ### c) Ratkaise dirfuzt-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf. Tämä auttaa 020-your-eyes-only ratkaisemisessa.
+
+Tämä tehtävä olikin aikaisemmin tuttu Tunkeutumistestaus kurssilta. En lähtenyt tekemään kyseistä tehtävää uudelleen vaan kertasin tehtävän omasta GitHubistani, tässä vielä linkki siihen: https://github.com/Ferresette/tunku/blob/main/h3FuffFaster.md
+
 ### d) Murtaudu 020-your-eyes-only. Ks. Karvinen 2024: Hack'n Fix
+
+Tehtävä alkoi siirtymällä 020-your-eyes-only tiedostoon. Tämän jälkeen teron ohjeissa ohjeistettiin luomaan virtuaalinen ympäristö.
+
+    $ sudo apt-get -y install virtualenv # lataa virtualenvin
+
+    $ virtualenv virtualenv/ -p python3 --system-site-packages # luo virtualenv ympäristön käyttäen python3:sta ja sallii pakettejen käytön ympäristössä
+
+![image](https://github.com/user-attachments/assets/76a8b9ac-5aef-4290-a8b0-4b3dd00eaade)
+
+Seuraavaksi aktivoidaan virtualenv ja django toimii vain jos se on aktivoituna.
+
+![image](https://github.com/user-attachments/assets/db8c9112-ba3a-4290-82bf-e5786bb0b5b2)
+
+Seuraavaksi tutkittiin mitä requirements.txt pitää sisällään ja sieltä löytyi django. Siirryttiin lataamaan kyseinen tiedosto ja django pitäisi olla asennettuna. Tarkastettiin, että versio oli vielä oikein eli *4.2.16*.
+
+![image](https://github.com/user-attachments/assets/e5db44b9-4e5e-45bd-b0bd-dfb39fa054ec)
+
+Seuraavaksi päivitin databasen ja käynnistin testiserverin.
+
+    $ ./manage.py makemigrations; ./manage.py migrate
+    $ ./manage.py runserver
+
+Hommat oli raiteillaan ja päästin tutkimaan sivustoa. 
+
+![image](https://github.com/user-attachments/assets/3ef8d430-e247-40f4-ab23-89a61ce18ec1)
+
+
+
+
 ### e) Korjaa 020-your-eyes-only haavoittuvuus. Osoita testillä, että ratkaisusi toimii.
