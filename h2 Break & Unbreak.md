@@ -124,3 +124,38 @@ Välillä turhauttaa aika paljon, kuinka pienestä kiinni ratkaisu voi olla. Kä
 
 
 ### e) Korjaa 020-your-eyes-only haavoittuvuus. Osoita testillä, että ratkaisusi toimii.
+
+Seuraavana tarkoitus oli korjata haavoittuvuus. Samaan tyyliin kun edellisessä tehtävässä lähdin tutkimaan python tiedostoja ja mitä ne pitivät sisällään. Hyvän tovin heiluin ja tutkin erilaisisa python tiedostoja. Aluksi olin vähän hakoteillä kun olin logtin/accounts/views.py/ polussa, en sieltä löytänyt ratkaisua. Tutkin lisää filejä ja huomasin että logtin/hats/ polusta löytyi myös views.py, missä oli eri koodi.
+
+logtin/accounts/views.py näkymä microlla.
+
+![image](https://github.com/user-attachments/assets/229c1627-2886-4ece-8227-93bab6d240f3)
+
+logtin/hats/views.py näkymä microlla.
+
+![image](https://github.com/user-attachments/assets/25e79190-1ed6-4b8f-9b32-fc933a0966d9)
+
+Tämä jälkimmäinen näyttikin jo paljon lupaavammalta ratkaisun suhteen. Hetken silmäilyn jälkeen alkoi hahmottumaan. Kolme erilaista classia "MyDataView" eli oma profiili mihin päästiin sivustolla eteenpäin. Ja tämä vaatii kirjautumisen. Seuraava kohta "AdminDashbboardView" sinne kun koitti mennä tulee 403 forbidden vastaan. Eli kielletty, mutta koodissa on kohta, missä se vaatii käyttäjän olevan Staffia. Ja viimeisenä kohta oli "AdminShowAllView", millä oli samat vaatimukset kuin ensimmäisellä kohdalla. Päätin lisätä self.requestin staffiksi myös viimeiseen kohtaan, mikä todennäköisesti blockkaisi pääsyni nyt myös sinne. 
+
+![image](https://github.com/user-attachments/assets/1818b61d-f9d7-4453-8453-890659b0a857)
+
+![image](https://github.com/user-attachments/assets/bbd084aa-0ed5-4492-bc3d-edfb8ff0b659)
+
+Tämän jälkeen pääsy oli myös evätty sinne. Koodia tutkimalla voi löytää virheitä näköjään aika helposti, tietty se vähän helpottaa kun tietää juuri mitä etsii. Harjoitukset oli hyviä, vaikka muutaman kerran epätoivo meinasi iskeä. Aikaa tehtävien suorittamiseen meni n. 7 tuntia.
+
+### g) Vapaaehtoinen. Johdantotehtävä, joka auttaa 010-staff-only ratkaisemisessa. Ratkaise Portswigger Academyn "Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data".
+
+
+
+### References
+
+https://terokarvinen.com/application-hacking/#laksyt
+
+https://terokarvinen.com/hack-n-fix/
+
+https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
+
+https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data
+
+https://chatgpt.com
+
