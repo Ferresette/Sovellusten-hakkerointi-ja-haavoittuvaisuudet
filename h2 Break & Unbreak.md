@@ -1,7 +1,6 @@
-### Alusta
-
-Virtuaalikone
-- Debian 12 Bookworm
+### Ympäristö
+- Virtualbox Version 7.0.10
+- Debian 12 (64 bit)
 - 4GB RAM
 
 
