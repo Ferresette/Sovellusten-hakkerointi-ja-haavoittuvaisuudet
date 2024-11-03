@@ -40,9 +40,6 @@
     $ sudo apt-get -y install python3-flask python3-flask-sqlalchemy
     $ python3 staff-only.py
 
-![image](https://github.com/user-attachments/assets/e8b5a51d-adc7-494f-bf0a-4bca5da7264e)
-
-
   Löydettiin ip-osoite, missä sovellus on käynnissä ja lähdettiin sitä kohti seuraavaksi.
 
   Tarkoitus oli selvittää SUPERADMININ salasana, kokeilin eri variaatioita esimerkiksi 123 mitä ohjeistettiin. Tämä paljasti salasanan. Huomasin, että kenttään ei voinut kirjoittaa tekstiä vaan pelkkiä numeroita, joten lähdin tutkimaan tiedostoja lisää. Siirryin templateseihin ja sieltä löytyi index.html tiedosto, jota lähdin tutkailemaan micro tekstieditorilla.
@@ -54,12 +51,29 @@
   ![image](https://github.com/user-attachments/assets/929adfa5-9b98-4e1a-b177-91da6fd4af69)
 
 
-  ![image](https://github.com/user-attachments/assets/5990f2c7-ba70-439b-9fff-91c6cd9d9352)
+  ![image](https://github.com/user-attachments/assets/e8b5a51d-adc7-494f-bf0a-4bca5da7264e)
 
   OR 1=1 tarkoittaa ehto palauttaa aina true, koska 1=1 on aina totta. Limit sen sijaan rajaa tulosta. Tässä tapauksessa ohitettiin 2 riviä ja palautettiin yksi rivi. Vähän jäi mietityttämään, miksi juuri tuo 2,1 paljasti SUPERADMININ, koska 1,1 tai 3,1 näytti taas eri tuloksia.
 
 
 ### b) Korjaa 010-staff-only haavoittuvuus lähdekoodista. Osoita testillä, että ratkaisusi toimii.
+
+Tutkiskeltuani python koodia yksi rivi pisti silmään, mistä ongelmat voisi johtua.
+
+![image](https://github.com/user-attachments/assets/5f9f331a-d279-4d1b-993e-78076ba89aeb)
+
+Aika paljon pyörittelin päässäni kaikenlaisia ajatuksia, mikä siinä olisi vialla tai miten sitä olisi järkevä modata toimivampaan kuntoon. Netistä selatessani sain käsityksen, että tällä hetkellä käyttäjänsyöte liitetään suoraan SQL kyselyyn ilman parametrisoitua kyselyä, mikä altistaa SQL injektiolle. 
+
+![image](https://github.com/user-attachments/assets/95d5d970-558c-4962-a2b5-a890342d3936)
+
+Yläpuolella näkyy muutettu python koodi, millä sain sen toimimaan. Eli luotiin parametrisoitu kysely. 
+
+    sql = "SELECT password FROM pins WHERE pin = :pin" # Käyttää :pin paikkamerkkiä SQL kyselyssä, eikä se toimi varsinaisena arvona.
+    db.session.execute(text(sql), {"pin": pin}) # Käyttää kyseistä sanakirjaa, mikä sisältää avaimen pin ja se vastaa paikkamerkkiä :pin. Sekä käyttäjän syötteen eli pin. SQLalchemy korvaa datan paikkamerkillä niin ettei SQL rakennetta voi muuttaa.
+
+
+
+
 ### c) Ratkaise dirfuzt-1 artikkelista Karvinen 2023: Find Hidden Web Directories - Fuzz URLs with ffuf. Tämä auttaa 020-your-eyes-only ratkaisemisessa.
 ### d) Murtaudu 020-your-eyes-only. Ks. Karvinen 2024: Hack'n Fix
 ### e) Korjaa 020-your-eyes-only haavoittuvuus. Osoita testillä, että ratkaisusi toimii.
