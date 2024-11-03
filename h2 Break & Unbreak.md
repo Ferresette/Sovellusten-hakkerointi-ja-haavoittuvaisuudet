@@ -145,6 +145,13 @@ Tämän jälkeen pääsy oli myös evätty sinne. Koodia tutkimalla voi löytä�
 
 ### g) Vapaaehtoinen. Johdantotehtävä, joka auttaa 010-staff-only ratkaisemisessa. Ratkaise Portswigger Academyn "Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data".
 
+![image](https://github.com/user-attachments/assets/61ef4547-5098-4838-8efb-812cd6a35ab9)
+
+
+### h) Vapaaehtoinen. Johdantotehtävä, joka auttaa 010-staff-only ratkaisemisessa. Ratkaise Portswigger Academyn "Lab: SQL injection vulnerability allowing login bypass"
+
+![image](https://github.com/user-attachments/assets/44369dcb-22d7-4fb2-bfb7-abca75ab57bd)
+
 
 
 ### References
@@ -158,4 +165,10 @@ https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
 https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data
 
 https://chatgpt.com
+
+https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+
+https://portswigger.net/web-security/access-control
+
+
 
