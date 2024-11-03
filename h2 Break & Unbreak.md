@@ -111,6 +111,16 @@ Hommat oli raiteillaan ja päästin tutkimaan sivustoa.
 ![image](https://github.com/user-attachments/assets/3ef8d430-e247-40f4-ab23-89a61ce18ec1)
 
 
+Sivustolta löytyi eri kohtia mitä pääsi klikkailemaan, login, register, show my personal data ja admin dashboard. Syötin vähän erilaisia tietoja, jotta näkisin millaista tulosta se antaa. 
+Aloitin fuzzaamaan kyseistä sivustoa, koska sitä ehdotettiin vinkeissä. Latasin ffufin ja tekstilistat samaan tyyliin kun aikaisemmalla kurssilla. Fuzzaamisen ansiosta löysin admin-console tuloksen.
+
+![image](https://github.com/user-attachments/assets/cc6787dc-f39d-4275-8907-62f75f86b489)
+
+Muistelin edellisen kurssin tehtävistä, että urliin syöttämällä löydettyjä tietoja hommat pelitti usein aika hyvin. Pitkään koitin syötellä kyseistä admin-consolea urliin eri vaiheissa, mutta tuloksetta. Epätoivo meinasi jos iskeä, mutta vinkeistä huomasin että kirjautuminen saattaisi auttaa, joten rekistöröidyin sivulle. Kirjauduin sisään tunnuksella ja koitin nyt syöttää admin-consolea urliin ja kappas vaan sehän toimi.
+
+![image](https://github.com/user-attachments/assets/1c496121-9038-4ffa-872e-620e71785db2)
+
+Välillä turhauttaa aika paljon, kuinka pienestä kiinni ratkaisu voi olla. Käyttämällä monta tuntia asiaan, minkä periaatteessa voisi ratkaista minuutissa. Toisaalta onnistumisen tuoma hyvä fiilis ja itsensä pari kertaa idiootiksi haukkumisen jälkeen pääsee aika nopeasti takaisin jaloilleen.
 
 
 ### e) Korjaa 020-your-eyes-only haavoittuvuus. Osoita testillä, että ratkaisusi toimii.
