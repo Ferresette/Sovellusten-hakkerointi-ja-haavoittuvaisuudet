@@ -35,11 +35,17 @@ Kokeilin vielä oikealla salasanalla, palauttaisiko se minulle Flagin, mutta en 
 
 ### c) Packd. Aja 'packd' paketista ezbin-challenges.zip. Mikä on salasana? Mikä on lippu? (Tämä tehtävä on hieman haastavampi. Kirjaa ylös kokeilemasi lähestymistavat ja keksimäsi hypoteesit. Toivottavasti pääset itse maaliin, mutta jos et, läpikävely paljastuu tunnilla...)
 
-Lähdin tutkimaan kyseistä tiedostoa strings komennolla ja sieltä löytyi osia halutusta salasanasta ja lipusta, mutta ne olivat pilkottu eri osiin. 
+Lähdin tutkimaan kyseistä tiedostoa strings komennolla ja sieltä löytyi osia halutusta salasanasta ja lipusta, mutta ne olivat pilkottu eri osiin. En saanut ratkaistua kyseistä tehtävää, mutta uskoisin, että ideana olisi tarkoitus luoda erillinen koodi, millä pystyisi lukemaan kyseisen tiedoston sisällön.
+
 
 ![image](https://github.com/user-attachments/assets/db03ea37-247d-4913-9418-35636f565c5e)
 
 
+### Lähteet
+
+https://terokarvinen.com/application-hacking/#laksyt
+
+https://chatgpt.com
 
 
 
