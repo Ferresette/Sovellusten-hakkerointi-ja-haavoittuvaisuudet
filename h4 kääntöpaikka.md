@@ -2,7 +2,9 @@
 Hammond 2022: Ghidra for Reverse Engineering (PicoCTF 2022 #42 'bbbloat') (Video, noin 20 min)
 
 -Videolla käytiin läpi Ghidran toimintaa ja miten se käyttäytyy.
+
 -Avoimen lähdekoodin reverse engineering työkalu
+
 -ltrace ja strace
 
 ### a) Asenna Ghidra.
