@@ -58,6 +58,8 @@ https://stackoverflow.com/questions/26462227/debugging-with-gdb-without-sources
 
 https://chatgpt.com/
 
+Kurssin Moodle materiaali
+
 
 
 
