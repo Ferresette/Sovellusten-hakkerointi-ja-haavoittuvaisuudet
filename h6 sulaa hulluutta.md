@@ -66,3 +66,72 @@ Jäi häiritsemään tekstin sisältö, joten päädyin tutkailemaan sitä viel 
   - ZIP
   - JADX
   - Bytecode-viewer
+
+
+Aloin tutustumaan listaan sivustolla https://github.com/offa/android-foss. Sovelluksia oli ihan tajuton määrä, joten hetki meni miettiessä minkä niistä valitsisi. Arpanumero osui kyseiseen sovellukseen: https://github.com/m-i-n-a-r/birday. Eli käytännössä sovellus mikä muistaa syntymäpäivät ja tapahtumat. Siirryin seuraavaksi lataamaan ohjelman APKta itselleni. (Android Package Kit) tiedostomuoto, mitä käytetään androidille ladatessa. 
+
+Aloitin tutustumalla miten se avataan **ZIP**:illä. Ensiksi uudelleen nimeämällä sen ja purkamalla:
+
+        $ mv Birday-451.apk Birday-451.zip
+        $ unzip Birday-451.zip
+
+![image](https://github.com/user-attachments/assets/30fd43d2-b8df-4e5b-a793-eccdd9297aee)
+
+Tiedoston purku onnistui, se tuli vähän vammaisesti hajautettuna Downloads kansioon sen jälkeen.
+
+![image](https://github.com/user-attachments/assets/7f7a1fd2-d1e9-4f24-8ea5-3d836ae77dc0)
+
+Alla olevat tiedot ovat kyseisen tiedoston sisältämiä.
+
+ - META-INF/: Contains metadata.
+ - res/: Resources like images, layout XML files, etc.
+ - AndroidManifest.xml: The app’s manifest file that contains important information like permissions.
+ - classes.dex: The compiled Java code (which you’ll need other tools to view in readable format).
+
+
+Tässä vaiheessa voin käsittääkseni vain tutkia ja analysoida resursseja ja luettelotiedostoa, mutta Java-koodin analysointiin tarvitsen muita työkaluja. Ne ovat ymmärtääkseni juuri nämä kyseiset JADX tai Bytecode Viewer.
+
+Aloin tutustumaan **JADX**:in käyttöön kyseisellä sivustolla: https://github.com/skylot/jadx/releases/tag/v1.5.1. Latasin JADX:in
+
+        $ git clone https://github.com/skylot/jadx.git
+
+        ~jadx$ ./gradlew dist
+
+Luulen, että lataaminen releaseista olisi ollut huomattavasti nopeampaa, mutta mentiin nyt tällä. Kestää kestää, käyn pakkaamassa kertauskamat tässä välissä. Meni liian sekavaksi, enkä oikein saanut toimimaan tätä kautta, joten poistin JADXin ja lähdin lataamaan sieltä releaseista. 
+
+Latasin paketin virtuaalikoneelleni. ``jadx-1.5.1.zip``. Purin paketit tämän jälkeen. Ladattuani paketit lähdin käynnistämään JADX:ia
+
+        $ ./jadx-gui
+
+Kun JADX avautui, siirsin kyseisen Birdayn apk tiedoston ohjelmaan.
+
+![image](https://github.com/user-attachments/assets/57e959c7-5256-482d-b146-63dec9cc11ce)
+
+Ohjelma avasi kyseisen sovelluksen tiedot, mitä pystyi kätevästi tutkailemaan sen kautta. Tämän kautta, näki esimerkiksi lähdekoodia.
+
+![image](https://github.com/user-attachments/assets/3e490f98-845f-492f-9c57-74418f196821)
+
+![image](https://github.com/user-attachments/assets/dd92460e-fcb9-4c9b-89ef-20dd719552d8)
+
+Viimeisenä oli vielä tarkoitus tarkastella **Bytecode Vieweriä**. Latasin kyseisen ohjelman https://github.com/Konloch/bytecode-viewer. Tuttuun tyyliin purettiin taas paketit.
+
+Käynnistin sovelluksen komennolla:
+
+        $ java -jar Bytecode-Viewer-2.12.jar
+
+Sovellusnäkymä avautuneena:
+
+![image](https://github.com/user-attachments/assets/dc359307-e682-4565-9b83-90b59d583879)
+
+Tuntuu toimivan aika samantyylisesti kun JADX, eli mahdollistavat esimerkiksi APK pakettien tutkimisen ja purkamisen.
+
+![image](https://github.com/user-attachments/assets/215840cf-7c18-431b-90a6-1228e688ccce)
+
+
+
+
+
+
+
+
+
