@@ -25,7 +25,7 @@ Exiftoolin antamaa näkymää. Nämä tiedot eivät ainakaan minun mielestäni h
 
 ![image](https://github.com/user-attachments/assets/105e8501-d005-4fa1-81ea-f1aed5c0072a)
 
-En tiedä olisiko vielä ollut tarkoitus saada enemmän tietoa esille, tai käytiinkö tunnilla vielä lisää läpi jotain eri metodeja tutkimista varten. Suoritin komennon ``binwalk h1.jpg`` tämän pitäisi analysoida tiedosto ja näyttää kaikki sisäiset tiedostot, kuten pakatut tiedostot, piilotetut tiedostot ja metatietoja. 
+En tiedä olisiko vielä ollut tarkoitus saada enemmän tietoa esille, tai käytiinkö tunnilla vielä lisää läpi jotain eri metodeja tutkimista varten.
 
 
 ### b) Tutki tiedostoa h1.jpg binwalk:lla. Mitä tietoja löydät nyt tiedostosta? Mitä työkalua käyttäisit tiedostojen erottamiseen? (Huomaa, että binwalk versio 2.x ja 3.x toimivat eri tavalla.)
