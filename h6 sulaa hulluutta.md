@@ -128,6 +128,23 @@ Tuntuu toimivan aika samantyylisesti kun JADX, eli mahdollistavat esimerkiksi AP
 ![image](https://github.com/user-attachments/assets/215840cf-7c18-431b-90a6-1228e688ccce)
 
 
+### Lähteet
+
+https://terokarvinen.com/application-hacking/#laksyt
+
+https://github.com/skylot/jadx/releases/tag/v1.5.1
+
+https://github.com/Konloch/bytecode-viewer
+
+https://github.com/offa/android-foss?tab=readme-ov-file#-calculator
+
+https://chatgpt.com 
+
+https://github.com/m-i-n-a-r/birday
+
+https://infosecwriteups.com/beginners-ctf-guide-finding-hidden-data-in-images-e3be9e34ae0d
+
+
 
 
 
