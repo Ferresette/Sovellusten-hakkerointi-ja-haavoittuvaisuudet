@@ -37,9 +37,40 @@
 
 ### Ratkaise CryptoPals Set 1 -haasteet. Tehtävät saa ratkaista millä vain ohjelmointikielellä ja käyttää mitä tahansa tekstieditoria tai IDE:ä. Tehtäviä ei kannata ratkaista tekoälyllä, koska se vain kopioi malliratkaisun suoraan koulutusmateriaalistaan.
 
+Ei ollut hirveästi hajua näistä tehtävistä, ja en muutenkaan ole hirveä fani koodaamisen kanssa. Mutta päätin lähteä siitä huolimatta tutkimaan, miten näitä tehtäviä voisi ratkaista ja saada parempaa ymmärrystä kyseisistä asioista.
+
 #### a) 1. Convert hex to base64.
 
+Teron ohjeissa sanottiin, että mikä tahansa tekstieditori ja koodikieli olisi käyttökelpoinen. Päädyin microon ja pythoniin. Aloitin lataamalla microeditorin virtuaalikoneelleni.
+
+    sudo apt install micro
+
+Tarkoituksena muuntaa cryptopalsin sivustolla oleva hexadesimaali pätkä base64 muotoon. Aloitin luomaan python koodia microeditorilla, jotta saisin muunnettua sen oikeaan muotoon.
+
+![image](https://github.com/user-attachments/assets/722f6fb5-2f01-4ba7-acaa-7c573e98bc32)
+
+``import base64`` - importaan base64, mikä auttaa base64 koodausta ja purkua
+
+``HEX_STRING =`` - Tähän tulee hexadesimaalinen string
+
+``BYTE_ARRAY = bytearray.fromhex(HEX_STRING)`` - muuntaa hexadesimaalisen stringin binääridataa vastaavaksi tavutaulukoksi
+
+``print(BYTE_ARRAY)`` - tulostetaan tavutaulukko (BYTE_ARRAY), binääridata näkyy ihmisen luettavana
+
+``BASE64_VAL = base64.b64encode(BYTE_ARRAY)`` - binäärimuotoinen taulukko koodataan base64 muotoon
+
+``print(BASE64_VAL)`` - tulostaa koodatun base64 merkkijonon
+
+
+
+![image](https://github.com/user-attachments/assets/7f263ff1-8116-4d75-be45-7b955bfd5d38)
+
+Valmis lopputulos, mikä näkyy kun ajetaan kyseinen python tiedosto. Ollaan onnistuttu kääntämään hexadesimaaleista base64 muotoon, sekä nähdään sen lisäksi vielä byte_arrayn kautta teksti. En tiedä olisko pelkkä base64 muotoinen stringi ollut riittävä tähän tehtävään pelkästään.
+
+
 #### b) 2. Fixed XOR.
+
+Aika ja osaaminen ei riittänyt ratkaisemaan tätä tehtävää, tutkiskelin erilaisia foorumeita ja sivustoja, mistä sain jonkin näköisen kuvan mitä tässä haluttaisiin tehdä, mutta omalla osaamistasollani ei riittänyt. Koodaaminen on muutenkin asia, mistä en hirveästi nauti ja se ei tunnu omalta jutulta.
 
 #### c) 3. Single-byte XOR cipher.
 
