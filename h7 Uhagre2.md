@@ -23,8 +23,17 @@
    - Lukujen merkitystä kryptografiassa
  
    - Luotu taulukko, mikä auttaa hahmottamaan suuria lukuja paremmin.
+     
 
 **Karvinen 2024: Python Basics for Hackers**
+
+ - Teron luomia ohjeita pythonin käyttöön tukemaan hakkerointia
+
+ - REPL, iPython, F5 compile
+
+ - Pythonin käyttö esimerkiksi laskimena
+
+
 
 ### Ratkaise CryptoPals Set 1 -haasteet. Tehtävät saa ratkaista millä vain ohjelmointikielellä ja käyttää mitä tahansa tekstieditoria tai IDE:ä. Tehtäviä ei kannata ratkaista tekoälyllä, koska se vain kopioi malliratkaisun suoraan koulutusmateriaalistaan.
 
